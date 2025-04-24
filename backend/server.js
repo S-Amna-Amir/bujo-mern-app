@@ -1,3 +1,4 @@
+/*
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
@@ -18,3 +19,24 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+*/
+
+const express = require("express");
+const signupRoute = require("./routes/signup");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const app = express();
+const createAdminAccount = require("./scripts/admin");
+const PORT = process.env.PORT || 5000;
+
+app.use(bodyParser.json());
+app.use(cors());
+
+createAdminAccount();
+
+app.use("/user", signupRoute);
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+})
