@@ -6,4 +6,15 @@ async function getUsers()
     return users;
 };
 
-module.exports = { getUsers};
+async function deleteUserById(id) {
+    // you might want to check existence first
+    const user = await User.findById(id);
+    if (!user) {
+      const err = new Error("User not found");
+      err.status = 404;
+      throw err;
+    }
+    await User.findByIdAndDelete(id);
+  }
+
+module.exports = { getUsers, deleteUserById};

@@ -40,6 +40,7 @@ createAdminAccount();
 app.use("/user", signupRoute);
 app.use("/auth", loginRoute);
 app.use("/api", userRoute); 
+app.use("/api/users", userRoute);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

@@ -35,7 +35,7 @@ const Login = () => {
                     console.error("Login failed:", result.message);
                     return;
                   }
-                  
+
                 localStorage.setItem("token", result.token);
                 const { email: userEmail, role: userRole } = jwtDecode(result.token);
                 console.log(result);
@@ -46,7 +46,7 @@ const Login = () => {
                 }
                 else
                 {
-                    navigate("/register");
+                    navigate("/home");
                 }
                 
             }
