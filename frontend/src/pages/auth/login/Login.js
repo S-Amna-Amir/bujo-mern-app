@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import "./Login.css";
 import { Button, Form} from 'react-bootstrap';
+import { jwtDecode } from "jwt-decode";
 
 const Login = () => {
         const navigate = useNavigate(); 
@@ -30,9 +31,24 @@ const Login = () => {
                     body: JSON.stringify(formData)
                 })
                 const result = await response.json();
+                if (!response.ok) {
+                    console.error("Login failed:", result.message);
+                    return;
+                  }
+                  
                 localStorage.setItem("token", result.token);
+                const { email: userEmail, role: userRole } = jwtDecode(result.token);
                 console.log(result);
-                navigate("/dashboard");
+                console.log(userEmail);
+                if(userEmail === "admin@test.com" || userRole === "admin")
+                {
+                    navigate("/dashboard");
+                }
+                else
+                {
+                    navigate("/register");
+                }
+                
             }
             catch(error)
             {
@@ -41,7 +57,6 @@ const Login = () => {
             finally{
                 setFormData({
                     email: "",
-                    name: "", 
                     password: ""
                 })
             }
