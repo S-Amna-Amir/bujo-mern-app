@@ -41,6 +41,7 @@ const Login = () => {
             finally{
                 setFormData({
                     email: "",
+                    name: "", 
                     password: ""
                 })
             }
