@@ -13,6 +13,7 @@ async function login(email, password) {
   if (user.role !== "admin" && !user.approved)
   {
     const err= new Error("Account pending approval");
+    err.userMessage = "Your account is awaiting admin approval.";
     err.status = 403;
     throw err;
   }

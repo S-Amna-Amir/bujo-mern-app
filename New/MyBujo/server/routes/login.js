@@ -4,7 +4,7 @@ const { login } = require("../controllers/login");
 const { body, validationResult } = require("express-validator");
 
 const router = express.Router();
-
+router.use(authenticateToken);
 router.use(cors());
 
 const validateLogin = [

@@ -1,8 +1,9 @@
 const express = require("express");
 const { authenticateToken } = require("../utils/authMiddleware");
 const { getPendingUsers, approveUser } = require("../controllers/admin");
-
 const router = express.Router();
+router.use(authenticateToken);
+
 
 router.use(authenticateToken);
 

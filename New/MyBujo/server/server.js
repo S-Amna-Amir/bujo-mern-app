@@ -54,5 +54,13 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: err.message });
 });
 
+const apiLimiter = rateLimit({
+  windowMs: 60*1000,  // 1 minute
+  max: 100,           // 100 requests per IP per minute
+});
+app.use("/api/", apiLimiter);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+
