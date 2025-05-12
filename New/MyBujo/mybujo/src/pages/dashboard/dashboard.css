@@ -1,0 +1,36 @@
+button
+{
+    color: #4A3C2C;
+    border: none;
+    background-color: #ADC789;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+}
+
+button:hover
+{
+    color: #4A3C2C;
+    background-color: #a8bc8c;
+}
+
+button:active
+{
+    color: #4A3C2C;
+    background-color: #ED9999;
+}
+
+Table{
+    background-color: #ED9999;
+}
+
+td{
+    background-color: cornsilk;
+}
+tr{
+    background-color: cornsilk;
+}
+
+.text-center{
+    margin-bottom: 10px;
+}

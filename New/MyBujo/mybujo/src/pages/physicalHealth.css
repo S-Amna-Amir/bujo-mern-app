@@ -1,0 +1,401 @@
+body
+{
+    background-color: #ADC789;
+    color:#4A3C2C;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bar {
+    height: 100%;
+    background-color: #ED9999;
+    transition: width 0.3s ease;
+}
+
+.progress-container {
+    width: 100%;
+    height: 30px;
+    background-color: cornsilk;
+    border-radius: 15px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.cal-bar {
+    height: 100%;
+    background-color: #ED9999;
+    transition: width 0.3s ease;
+}
+
+.cal-progress-container {
+    width: 100%;
+    height: 30px;
+    background-color: cornsilk;
+    border-radius: 15px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+
+@font-face {
+    font-family: 'morningBright';
+    src: url('/public/Morning Bright.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1
+{
+    font-family: morningBright;
+    font-size: 50px;
+    letter-spacing: 4px;
+    color: #4A3C2C;
+    background-color: cornsilk;
+    padding: 20px;
+    border-radius: 25px;
+    width:fit-content;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.pageBody
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin:20px;
+}
+
+.sleepBox
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin:20px;
+}
+
+.sleep
+{
+    flex: 1;
+    background-color: #648D57;
+    color:cornsilk;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.waterBox
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin:20px;
+}
+
+.water
+{
+    flex: 1;
+    background-color: #648D57;
+    color:cornsilk;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+#message
+{
+    margin: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.workoutBox
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin:20px;
+}
+
+.workout
+{
+    flex: 1;
+    background-color: #648D57;
+    color:cornsilk;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.eatBox
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin:20px;
+}
+
+.calories
+{
+    flex:1;
+    background-color: #648D57;
+    color:cornsilk;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.changes
+{
+    margin: 10px;
+    margin-top: 50px;
+    padding: 20px;
+    border:#4A3C2C solid 3px;
+    border-radius: 25px;
+    width:fit-content;
+}
+
+.physbutton
+{
+    color: #4A3C2C;
+    border: none;
+    background-color: #ADC789;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.physbutton:hover
+{
+    color: #4A3C2C;
+    background-color: #a8bc8c;
+}
+
+.physbutton:active
+{
+    color: #4A3C2C;
+    background-color: #ED9999;
+}
+
+input[type=text]
+{
+    background-color: cornsilk;
+    color:#4A3C2C;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+input[type=range] 
+{
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+    margin: 10px 0;
+}
+
+input[type=range]::-webkit-slider-runnable-track 
+{
+    width: 100%;
+    height: 15px;
+    background: cornsilk;
+    border-radius: 10px;
+    border: none;
+}
+
+input[type=range]::-webkit-slider-thumb 
+{
+    -webkit-appearance: none;
+    height: 27px;
+    width: 27px;
+    border-radius: 50%;
+    background: #ED9999;
+    margin-top: -6px;
+}
+
+#changew
+{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #648D57;
+    color: cornsilk;
+}
+
+#changec
+{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #648D57;
+    color: cornsilk;
+}
+
+#changew:hover
+{
+    background-color: #77a06a;
+}
+
+#changec:hover
+{
+    background-color: #77a06a;
+}
+
+#changew:active
+{
+    background-color: #ED9999;
+}
+
+#changec:active
+{
+    background-color: #ED9999;
+}
+
+.heading
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.spooks
+{
+    margin-top: -350px;
+}
+
+.save-button
+{
+    padding: 10px 20px; 
+    background-color: #648D57; 
+    color: cornsilk;
+    border: none;
+    border-radius: 10px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.save-button:active
+{
+    background-color: #ED9999;
+}
+
+.save-button:hover
+{
+    background-color: #77a06a;
+}
+
+@media (max-width: 400px) 
+{
+    .pageBody 
+    {
+      flex-direction: column;
+      gap: 15px;
+      margin: 10px;
+    }
+  
+    .journal 
+    {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .sleepBox,
+    .waterBox,
+    .workoutBox,
+    .eatBox 
+    {
+      flex-direction: column;
+      margin: 0px;
+      gap: 10px;
+      width: 100%;
+    }
+  
+    .sleepimg img,
+    .waterimg img,
+    .workoutimg img,
+    .eatimg img 
+    {
+      width: 80px;
+      height: auto;
+      margin: 0 auto;
+    }
+  
+    .sleep,
+    .water,
+    .workout,
+    .calories 
+    {
+      width: 90%;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+  
+    .spooks 
+    {
+      margin-top: 20px;
+      order: 5;
+      text-align: center;
+      align-self: center;
+    }
+  
+    .spooks img 
+    {
+      width: 120px;
+      height: auto;
+    }
+  
+    .changes 
+    {
+      width: 90%;
+      padding: 15px;
+      margin: 15px 0;
+      margin-left: 20px;
+      box-sizing: border-box;
+    }
+  
+    h1 
+    {
+      font-size: 28px;
+      padding: 12px;
+      letter-spacing: 2px;
+      width: 100%;
+      text-align: center;
+      margin-left: 0;
+    }
+  
+    #message 
+    {
+      margin: 8px 0;
+      font-size: 14px;
+      text-align: center;
+    }
+  
+    button 
+    {
+      padding: 8px;
+      font-size: 14px;
+      margin: 3px;
+    }
+  
+    input[type=text],
+    input[type=range] 
+    {
+      width: 100%;
+      box-sizing: border-box;
+      margin: 5px 0;
+    }
+  
+    .progress-container,
+    .cal-progress-container 
+    {
+      height: 25px;
+      margin: 15px 0;
+    }
+  
+    input[type=range]::-webkit-slider-thumb 
+    {
+      height: 22px;
+      width: 22px;
+    }
+  }

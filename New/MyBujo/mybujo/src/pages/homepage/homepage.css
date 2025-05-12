@@ -1,0 +1,62 @@
+body
+{
+    background-color: #ADC789;
+    color:#4A3C2C;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainmainbody
+{
+    overflow-y: hidden;
+}
+
+.mainbody
+{
+    overflow-y: hidden;
+}
+
+.loadbearing
+{
+    margin: 10px;
+}
+
+.spookshome
+{
+    margin-top: -85px;
+    margin-left: 700px;
+}
+
+.navbutton
+{
+    color: #4A3C2C;
+    border: none;
+    background: #ED9999;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.navbutton:hover
+{
+    color: #4A3C2C;
+    background-color: #a8bc8c;
+    position: relative;
+    z-index: 1;
+}
+
+.navbutton:active
+{
+    color: #4A3C2C;
+    background-color: #ED9999;
+}
+
+
+@media (max-width: 400px) 
+{
+    .spookshome
+    {
+        scale: 0.5;
+        margin-bottom: 100px;
+    }
+  }
