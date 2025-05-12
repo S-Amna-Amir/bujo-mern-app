@@ -5,7 +5,7 @@ const authMiddleware = require("../utils/authMiddleware");
 
 const router = express.Router();
 router.use(cors());
-router.get("/users", authMiddleware.authenticateToken, userController.getUsers);
+router.get("/", authMiddleware.authenticateToken, userController.getUsers);
 router.get("/:id", authMiddleware.authenticateToken, userController.getUserById);
 router.put("/:id", authMiddleware.authenticateToken, userController.updateUser);
 

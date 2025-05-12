@@ -6,14 +6,10 @@ async function login(req, res) {
     const { email, password } = req.body;
     // authService.login now returns both token and user
     const { token, user } = await authService.login(email, password);
-
-    // send back token AND minimal user info
-    res.json({
-      token,
-      user: { email: user.email, role: user.role }
-    });
-  } catch (error) {
-    res.status(401).json({ message: "Invalid email or password" });
+    res.json({ token, user: { email: user.email, role: user.role } });
+  } catch (err) {
+    const status = err.status || 401;
+    res.status(status).json({ message: err.message });
   }
 }
 

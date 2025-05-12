@@ -15,7 +15,7 @@ const Home = () => {
 
     // 2️⃣ Decode and redirect admins away
     const { email, role } = jwtDecode(token);
-    if (role === 'admin') return navigate('/dashboard');
+    if (role === 'admin') return navigate('/admin/pending');
 
     setUserEmail(email);
   }, [navigate]);

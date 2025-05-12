@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import PhysicalHealth from "./pages/physicalHealth";
 import SearchFilter from "./pages/searchFilter";
 import Profile from "./pages/profile";
+import PendingRequests from "./pages/admin/PendingRequests";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/physical-health" element={<PhysicalHealth />} />
         <Route path="/search-filter" element={<SearchFilter />} />
         <Route path="/profile" element={<Profile ></Profile>}/>
+        <Route path="/admin/pending" element={<PendingRequests />}/>
       </Routes>
     </Router>
   ); 

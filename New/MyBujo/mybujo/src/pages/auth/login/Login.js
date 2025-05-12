@@ -66,7 +66,7 @@ const Login = () => {
                 console.log(userEmail);
                 if(userEmail === "admin@test.com" || userRole === "admin")
                 {
-                    navigate("/dashboard");
+                    navigate("/admin/pending");
                 }
                 else
                 {

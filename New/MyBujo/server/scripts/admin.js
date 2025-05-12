@@ -10,7 +10,8 @@ async function createAdminAccount() {
                 email: "admin@test.com",
                 name: "Admin",
                 password: await bcrypt.hash("admin1", 10),
-                role: "admin"
+                role: "admin",
+                approved: true,
             })
             await newAdmin.save();
             console.log("Admin account created successfully");

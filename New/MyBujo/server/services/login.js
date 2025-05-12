@@ -10,6 +10,12 @@ async function login(email, password) {
     throw new Error("User not found");
   }
 
+  if (user.role !== "admin" && !user.approved)
+  {
+    const err= new Error("Account pending approval");
+    err.status = 403;
+    throw err;
+  }
   // 2. Compare submitted password with hashed password
   const isMatch = await bcrypt.compare(password, user.password);
   if (!isMatch) {
